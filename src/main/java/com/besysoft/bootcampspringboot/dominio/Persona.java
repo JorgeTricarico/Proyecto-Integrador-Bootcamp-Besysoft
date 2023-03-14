@@ -5,13 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @MappedSuperclass
-public abstract class Persona implements Serializable {
+public abstract class Persona{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

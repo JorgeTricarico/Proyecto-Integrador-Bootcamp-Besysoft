@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalTime;
 
 @Entity
@@ -14,7 +15,7 @@ import java.time.LocalTime;
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Table(name = "Mano_Obra")
-public class ManoObra {
+public class ManoObra implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

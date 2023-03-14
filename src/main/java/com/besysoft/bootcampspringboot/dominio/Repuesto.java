@@ -33,6 +33,6 @@ public class Repuesto {
     private Double valor;
 
     @ManyToOne
-    @Column(name = "DETALLE_ORDEN_TRABAJO", nullable = false)
+    @JoinColumn(name = "DETALLE_ORDEN_TRABAJO", nullable = false)
     private DetalleOrdenTrabajo detalleOrdenTrabajo;
 }

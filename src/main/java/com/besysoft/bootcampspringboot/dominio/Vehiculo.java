@@ -44,8 +44,8 @@ public class Vehiculo {
     private List<Cliente> clientes;
 
     @OneToMany
-    @Column(name = "ORDEN_TRABAJO_ID")
-    private OrdenTrabajo ordenTrabajoId;
+    @JoinColumn(name = "ORDEN_TRABAJO_ID")
+    private List<OrdenTrabajo> ordenTrabajoId;
 
 
 

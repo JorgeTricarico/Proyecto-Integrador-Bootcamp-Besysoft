@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -27,11 +28,11 @@ public class DetalleOrdenTrabajo {
     private Double valorTotal;
 
     @OneToOne
-    @Column(name = "ORDEN_TRABAJO_ID")
-    OrdenTrabajo ordenTrabajoId;
+    @JoinColumn(name = "ORDEN_TRABAJO_ID")
+    private OrdenTrabajo ordenTrabajoId;
 
     @OneToMany
-    @Column(name = "REPUESTO_ID")
-    Repuesto repuestoId;
+    @JoinColumn(name = "REPUESTO_ID")
+    private List<Repuesto> repuestoId;
 
 }

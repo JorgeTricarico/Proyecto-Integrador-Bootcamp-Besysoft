@@ -22,16 +22,16 @@ public class ManoObra {
     private Long id;
 
     @Column(name = "DETALLE", nullable = false)
-    String detalle;
+    private String detalle;
 
     @Column(name = "DURACION_HS", nullable = false)
-    LocalTime duracionHs;
+    private LocalTime duracionHs;
 
     @OneToOne
-    @Column(name = "MECANICO_ID", nullable = false)
-    Mecanico mecanicoId;
+    @JoinColumn(name = "MECANICO_ID", nullable = false)
+    private Mecanico mecanicoId;
 
     @OneToOne
-    @Column(name = "ORDEN_TRABAJO_ID", nullable = false)
-    OrdenTrabajo ordenTrabajoId;
+    @JoinColumn(name = "ORDEN_TRABAJO_ID", nullable = false)
+    private OrdenTrabajo ordenTrabajoId;
 }

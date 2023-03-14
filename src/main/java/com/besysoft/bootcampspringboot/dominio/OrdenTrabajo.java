@@ -56,15 +56,15 @@ public class OrdenTrabajo {
     private Long tipoTarjeta;
 
     @ManyToOne
-    @Column(name = "ADMINISTRATIVO_ID")
+    @JoinColumn(name = "ADMINISTRATIVO_ID")
     private Empleado administrativoId;
 
     @ManyToOne
-    @Column(name = "RECEPCIONISTA_ID")
+    @JoinColumn(name = "RECEPCIONISTA_ID")
     private Empleado recepcionistaId;
 
     @ManyToOne
-    @Column(name = "VEHICULO_ID")
+    @JoinColumn(name = "VEHICULO_ID")
     private Vehiculo vehiculoId;
 
 }

@@ -26,6 +26,6 @@ public class Cliente extends Persona implements Serializable {
     @Column(length = 15, name = "TELEFONO_DE_LINEA", nullable = false)
     private String telefonoDeLinea;
 
-    @ManyToMany(mappedBy = "Clientes")
+    @ManyToMany(mappedBy = "clientes")
     private List<Vehiculo> vehiculos;
 }

@@ -15,25 +15,19 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper=false)
 @Table(name = "Repuestos")
 public class Repuesto implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
-
     @Column(length = 255, name = "MARCA", nullable = false)
     private String marca;
-
     @Column(length = 255, name = "MODELO", nullable = false)
     private String modelo;
-
     @Column(length = 255, name = "REPUESTO", nullable = false)
     private String repuesto;
-
     @Column(name = "VALOR", nullable = false)
     private Double valor;
-
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "DETALLE_ORDEN_TRABAJO", nullable = false)
-    private DetalleOrdenTrabajo detalleOrdenTrabajo;
+    private DetalleOrdenTrabajo detalleOrdenTrabajo;*/
 }

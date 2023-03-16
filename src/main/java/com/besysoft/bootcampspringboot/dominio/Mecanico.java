@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class Mecanico extends Persona implements Serializable {
 
     @Column(name = "ACTIVO", nullable = false)
-    private Boolean activo;
+    private char activo;
 
     @Column(length = 255, name = "ESPECIALIDAD", nullable = false)
     private String especialidad;

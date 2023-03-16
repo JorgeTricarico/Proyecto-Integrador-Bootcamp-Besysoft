@@ -30,9 +30,9 @@ public class ManoObra implements Serializable {
 
     @OneToOne
     @JoinColumn(name = "MECANICO_ID", nullable = false)
-    private Mecanico mecanicoId;
+    private Mecanico mecanico;
 
     @OneToOne
     @JoinColumn(name = "ORDEN_TRABAJO_ID", nullable = false)
-    private OrdenTrabajo ordenTrabajoId;
+    private OrdenTrabajo ordenTrabajo;
 }

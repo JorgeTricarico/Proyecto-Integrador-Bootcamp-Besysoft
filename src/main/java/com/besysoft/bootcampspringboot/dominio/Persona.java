@@ -17,7 +17,7 @@ public abstract class Persona{
     @Column(name = "ID")
     private Long id;
 
-    @Column(length = 100, name = "NOMBRES", nullable = false) //length = 30,
+    @Column(length = 255, name = "NOMBRES", nullable = false) //length = 30,
     private String nombres;
 
     @Column(length = 80, name = "APELLIDO", nullable = false)

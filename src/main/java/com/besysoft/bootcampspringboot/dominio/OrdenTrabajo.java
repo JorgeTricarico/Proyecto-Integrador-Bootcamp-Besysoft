@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 
@@ -44,8 +45,8 @@ public class OrdenTrabajo implements Serializable {
     @Column(name = "FORMA_PAGO")
     private String formaPago;
 
-    @Column(name = "IMPORTE_TOTAL")
-    private Double importeTotal;
+    @Column(name = "IMPORTE_TOTAL", precision=19, scale=2)
+    private BigDecimal importeTotal;
 
     @Column(name = "KILOMETRAJE")
     private Long kilometraje;
@@ -58,14 +59,14 @@ public class OrdenTrabajo implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "ADMINISTRATIVO_ID")
-    private Empleado administrativoId;
+    private Empleado administrativo;
 
     @ManyToOne
     @JoinColumn(name = "RECEPCIONISTA_ID")
-    private Empleado recepcionistaId;
+    private Empleado recepcionista;
 
     @ManyToOne
     @JoinColumn(name = "VEHICULO_ID")
-    private Vehiculo vehiculoId;
+    private Vehiculo vehiculo;
 
 }

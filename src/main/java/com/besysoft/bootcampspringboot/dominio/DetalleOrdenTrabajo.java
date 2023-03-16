@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -25,15 +26,15 @@ public class DetalleOrdenTrabajo implements Serializable {
     @Column(name = "CANTIDAD")
     private Integer cantidad;
 
-    @Column(name = "VALOR_TOTAL")
-    private Double valorTotal;
+    @Column(name = "VALOR_TOTAL", precision=19, scale=2)
+    private BigDecimal valorTotal;
 
     @OneToOne
     @JoinColumn(name = "ORDEN_TRABAJO_ID")
-    private OrdenTrabajo ordenTrabajoId;
+    private OrdenTrabajo ordenTrabajo;
 
     @OneToMany
     @JoinColumn(name = "REPUESTO_ID")
-    private List<Repuesto> repuestoId;
+    private List<Repuesto> repuestos;
 
 }

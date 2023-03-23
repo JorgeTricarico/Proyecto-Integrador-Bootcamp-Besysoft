@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -23,4 +22,7 @@ public class Mecanico extends Persona implements Serializable {
 
     @Column(length = 255, name = "ESPECIALIDAD", nullable = false)
     private String especialidad;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "mecanico")
+    private Set<ManoObra> manosDeObra;
 }

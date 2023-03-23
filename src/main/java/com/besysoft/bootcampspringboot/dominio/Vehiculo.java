@@ -40,13 +40,13 @@ public class Vehiculo implements Serializable {
     @ManyToMany
     @JoinTable(
             name= "CLIENTE_VEHICULO",
-            joinColumns = @JoinColumn(name = "CLIENTE_ID"),
-            inverseJoinColumns = @JoinColumn (name = "VEHICULO_ID"))
+            joinColumns = @JoinColumn(name = "VEHICULO_ID"),
+            inverseJoinColumns = @JoinColumn (name = "CLIENTE_ID"))
     private List<Cliente> clientes;
 
-    @OneToMany
-    @JoinColumn(name = "ORDEN_TRABAJO_ID")
-    private List<OrdenTrabajo> ordenTrabajoId;
+    /*@OneToMany
+    @JoinColumn(name = "Ordenes_Trabajo_ID")
+    private List<OrdenTrabajo> ordenTrabajo;*/
 
 
 

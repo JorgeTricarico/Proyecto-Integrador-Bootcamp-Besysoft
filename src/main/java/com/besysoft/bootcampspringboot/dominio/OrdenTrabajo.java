@@ -9,11 +9,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Table(name = "Ordenes_Trabajo")
@@ -68,5 +68,11 @@ public class OrdenTrabajo implements Serializable {
     @ManyToOne
     @JoinColumn(name = "VEHICULO_ID")
     private Vehiculo vehiculo;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "ordenTrabajo")
+    private Set<ManoObra> manosDeObra;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "ordenTrabajo")
+    private Set<DetalleOrdenTrabajo> detallesOrdenesTrabajo;
 
 }

@@ -28,11 +28,11 @@ public class ManoObra implements Serializable {
     @Column(name = "DURACION_HS", nullable = false)
     private LocalTime duracionHs;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "MECANICO_ID", nullable = false)
     private Mecanico mecanico;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "ORDEN_TRABAJO_ID", nullable = false)
     private OrdenTrabajo ordenTrabajo;
 }

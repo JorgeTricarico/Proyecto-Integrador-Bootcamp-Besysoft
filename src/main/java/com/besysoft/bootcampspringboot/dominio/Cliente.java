@@ -23,7 +23,7 @@ public class Cliente extends Persona implements Serializable {
     @Column(length = 255, name = "CORREO_ELECTRONICO", nullable = false)
     private String correoElectronico;
 
-    @Column(length = 15, name = "TELEFONO_DE_LINEA", nullable = false)
+    @Column(length = 15, name = "TELEFONO_LINEA", nullable = false)
     private String telefonoDeLinea;
 
     @ManyToMany(mappedBy = "clientes")
